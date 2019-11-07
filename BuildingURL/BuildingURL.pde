@@ -2,8 +2,8 @@
 //Moscow 524901
 //Berlin 2590159
 
-String baseURL_Current = "https://openweathermap.org?data/2.5/weather?";
-String baseURL_forecast = "https://openweathermap.org?data/2.5/forecast?";
+String baseURL_Current = "https://api.openweathermap.org?data/2.5/weather?";
+String baseURL_forecast = "https://api.openweathermap.org?data/2.5/forecast?";
 String albertaId = "58831102";
 String edmontonId = "5946768";
 String berlinId = "2590159";
