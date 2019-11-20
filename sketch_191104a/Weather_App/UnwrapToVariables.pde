@@ -27,7 +27,7 @@
  
  */
 
-import java.util.Date; 
+import java.util.Date; //Date Conversation, UNIX Time Stamp from Jan 1, 1970
 
 //Global Variables
 String mainWeatherEdmonton, descriptionEdmonton, iconEdmonton, countryEdmonton, nameEdmonton;

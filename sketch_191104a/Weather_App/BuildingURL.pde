@@ -28,7 +28,7 @@ void buildingURL() {
   String edmontonId = "id=5946768";
   String berlinId = "id=5913490";
   String moscowId = "id=6118158";
-  String apiKey = "APPID=e3a46830f7ca648a3730bce5f5904831"; 
+  String apiKey = "APPID=e3a46830f7ca648a3730bce5f5904831"; //API Key is PRIVATE so not included here
   String mode = "mode=json";
   String unitMetric = "units=metric";
   String and = "&";
@@ -42,15 +42,15 @@ void buildingURL() {
   URLCurrentMoscow = baseURL_Current+moscowId+and+apiKey+and+mode+and+unitMetric;
   URLForecastMoscow = baseURL_Forecast+moscowId+and+apiKey+and+mode+and+unitMetric;
 
-
+  //Verification in Console, copy-paste variable output to Chrome and verify data can be seen correctly
   //println(URLCurrentAlberta);
   //println(URLForecastAlberta);
   //println(URLCurrentEdmonton);
   //println(URLForecastEdmonton);
-  //println(URLCurrentCalgary);
-  //println(URLForecastCalgary);
-  //println(URLCurrentRedDeer);
-  //println(URLForecastRedDeer);
+  //println(URLCurrentBerlin);
+  //println(URLForecastBerlin);
+  //println(URLCurrentMoscow);
+  //println(URLForecastMoscow);
 } //End buildingURL()
 
 void APICall() {
