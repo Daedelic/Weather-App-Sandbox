@@ -33,13 +33,13 @@ void GUI_Setup() {
   apiCallRectWidth1 = width * 1/3;
   apiCallRectHeight1 = height * 60/300;
   rect(apiCallX1, apiCallY1, apiCallRectWidth1, apiCallRectHeight1);
-  // Calgary
+  // Berlin
   apiCallX2 = width * 1/3;
   apiCallY2 = height * 240/300;
   apiCallRectWidth2 = width * 1/3;
   apiCallRectHeight2 = height * 60/300;
   rect(apiCallX2, apiCallY2, apiCallRectWidth2, apiCallRectHeight2);
-  //Red Deer
+  //Moscow
   apiCallX3 = width * 2/3;
   apiCallY3 = height * 240/300;
   apiCallRectWidth3 = width * 1/3;
