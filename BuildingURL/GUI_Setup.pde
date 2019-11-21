@@ -1,10 +1,11 @@
+// Global Variables
 color black = 0;
 float titleX, titleY, titleRectWidth, titleRectHeight;
 float quitX, quitY, quitRectWidth, quitRectHeight;
 float currentAPIX, currentAPIY, currentAPIRectWidth, currentAPIRectHeight;
 float currentTempX, currentTempY, currentTempRectWidth, currentTempRectHeight;
 float apiCallX1, apiCallY1, apiCallRectWidth1, apiCallRectHeight1; //Edmonton
-float apiCallX2, apiCallY2, apiCallRectWidth2, apiCallRectHeight2; //Calgary
+float apiCallX2, apiCallY2, apiCallRectWidth2, apiCallRectHeight2; //Berlin
 float apiCallX3, apiCallY3, apiCallRectWidth3, apiCallRectHeight3; //Red Deer
 
 void GUI_Setup() {
@@ -39,11 +40,16 @@ void GUI_Setup() {
   apiCallRectWidth2 = width * 1/3;
   apiCallRectHeight2 = height * 60/300;
   rect(apiCallX2, apiCallY2, apiCallRectWidth2, apiCallRectHeight2);
-  //Moscow
+  //Red Deer
   apiCallX3 = width * 2/3;
   apiCallY3 = height * 240/300;
   apiCallRectWidth3 = width * 1/3;
   apiCallRectHeight3 = height * 60/300;
   rect(apiCallX3, apiCallY3, apiCallRectWidth3, apiCallRectHeight3);
   //
+  currentTempX = width * 1/6;
+  currentTempY = height * 1/4;
+  currentTempRectWidth = width * 1/2.8;
+  currentTempRectHeight = height * 1/2.8;
+  rect(currentTempX, currentTempY, currentTempRectWidth, currentTempRectHeight);
 }

@@ -6,10 +6,10 @@ void setup() {
   buildingURL();
   APICall();
   unwrapToVariables();
-  println(nameEdmonton); //Verify Call is working 
+  println(nameEdmonton);  
   println(nameBerlin);
   println(nameMoscow);
-  println(apiCurrentDateCall); //Verify API Call is changing with mousePressed()
+  println(apiCurrentDateCall); 
 }
 
 void draw() {

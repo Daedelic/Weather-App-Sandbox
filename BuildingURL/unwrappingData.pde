@@ -47,8 +47,8 @@ void buildingURL() {
   //println(URLForecastAlberta);
   //println(URLCurrentEdmonton);
   //println(URLForecastEdmonton);
-  //println(URLCurrentCalgary);
-  //println(URLForecastCalgary);
+  //println(URLCurrentBerlin);
+  //println(URLForecastBerlin);
   //println(URLCurrentRedDeer);
   //println(URLForecastRedDeer);
 } //End buildingURL()
