@@ -3,7 +3,7 @@
 PFont titleFont;
 //String[] fontList = PFont.list(); //To list all fonts available on system
 
-String title, quit, timeStampAPICall, currentTempEdm, currentTempBerlin, currentTempRD;
+String title, quit, timeStampAPICall, currentTempEdmonton, currentTempBerlin, currentTempMoscow;
 String nameEdm, nameCalg, nameRD;
 
 void textSetup() {
@@ -22,7 +22,6 @@ void textSetup() {
 }
 
 void textDraw() {
-  fill(#2C08FF);
   textAlign(CENTER, TOP);
 }
 
