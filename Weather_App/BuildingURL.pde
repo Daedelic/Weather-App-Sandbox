@@ -49,8 +49,8 @@ void buildingURL() {
   //println(URLForecastEdmonton);
   //println(URLCurrentBerlin);
   //println(URLForecastBerlin);
-  //println(URLCurrentRedDeer);
-  //println(URLForecastRedDeer);
+  //println(URLCurrentMoscow);
+  //println(URLForecastMoscow);
 } //End buildingURL()
 
 void APICall() {

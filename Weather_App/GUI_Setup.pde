@@ -6,7 +6,7 @@ float currentAPIX, currentAPIY, currentAPIRectWidth, currentAPIRectHeight;
 float currentTempX, currentTempY, currentTempRectWidth, currentTempRectHeight;
 float apiCallX1, apiCallY1, apiCallRectWidth1, apiCallRectHeight1; //Edmonton
 float apiCallX2, apiCallY2, apiCallRectWidth2, apiCallRectHeight2; //Berlin
-float apiCallX3, apiCallY3, apiCallRectWidth3, apiCallRectHeight3; //Red Deer
+float apiCallX3, apiCallY3, apiCallRectWidth3, apiCallRectHeight3; //Moscow
 
 void GUI_Setup() {
   background(black); // Add dark mode

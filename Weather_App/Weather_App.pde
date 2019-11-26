@@ -1,6 +1,6 @@
 // Open Weather Map App
 // Global Variables
-String edmTemp, calgTemp, rdTemp;
+String edmTemp, BerTemp, MosTemp;
 
 void setup() {
   buildingURL();
@@ -28,15 +28,12 @@ void setup() {
 }
 
 void draw() {
-  // City Call, see procedure using Boolean & Button
-  // Choice of Three Cities: Edmonton, Calgary, Red Deer
 }
 
 void mousePressed() {
   APICall();
   unwrapToVariables();
   println(apiCurrentDateCall);
-  // City Call, see procedure using Boolean & Button
   //
   
   if ( mouseX>apiCallX1 && mouseX<apiCallX1+apiCallRectWidth1 && mouseY>apiCallY1 && mouseY<apiCallY1+apiCallRectHeight1 ) {
@@ -47,18 +44,18 @@ void mousePressed() {
   }
   //
   if (mouseX>apiCallX2 && mouseX<apiCallX2+apiCallRectWidth2 && mouseY>apiCallY2 && mouseY<apiCallY2+apiCallRectHeight2) {
-    calgTemp = String.valueOf(tempBerlin);
+    BerTemp = String.valueOf(tempBerlin);
     rect(currentTempX, currentTempY, currentTempRectWidth, currentTempRectHeight);
-    textDraw(calgTemp, titleFont, height, #2C08FF, CENTER, CENTER, currentTempX, currentTempY, currentTempRectWidth, currentTempRectHeight); //Calgary
-    println(tempBerlin, calgTemp);
+    textDraw(BerTemp, titleFont, height, #2C08FF, CENTER, CENTER, currentTempX, currentTempY, currentTempRectWidth, currentTempRectHeight); //Berlin
+    println(tempBerlin, BerTemp);
   }
   //
   
   if (mouseX>apiCallX3 && mouseX<apiCallX3+apiCallRectWidth3 && mouseY>apiCallY3 && mouseY<apiCallY3+apiCallRectHeight3) {
-    rdTemp = String.valueOf(tempMoscow);
+    MosTemp = String.valueOf(tempMoscow);
     rect(currentTempX, currentTempY, currentTempRectWidth, currentTempRectHeight);
-    textDraw(rdTemp, titleFont, height, #2C08FF, CENTER, CENTER, currentTempX, currentTempY, currentTempRectWidth, currentTempRectHeight); //Calgary
-    println(tempMoscow, rdTemp);
+    textDraw(MosTemp, titleFont, height, #2C08FF, CENTER, CENTER, currentTempX, currentTempY, currentTempRectWidth, currentTempRectHeight); //MoscowBerlin
+    println(tempMoscow, MosTemp);
   }
   
   //
