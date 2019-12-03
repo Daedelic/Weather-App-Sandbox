@@ -1,6 +1,3 @@
-//Edmonton 5946768
-//Moscow 524901
-//Berlin 2590159
   
 //Global Variable
 String URLCurrentAlberta;
@@ -9,8 +6,8 @@ String URLCurrentEdmonton;
 String URLForecastEdmonton;
 String URLCurrentBerlin;
 String URLForecastBerlin;
-String URLCurrentMoscow;
-String URLForecastMoscow;
+String URLCurrentLichtenrade;
+String URLForecastLichtenrade;
 
 JSONObject jsonCurrentAlberta;
 JSONObject jsonForecastAlberta;
@@ -18,17 +15,17 @@ JSONObject jsonCurrentEdmonton;
 JSONObject jsonForecastEdmonton;
 JSONObject jsonCurrentBerlin;
 JSONObject jsonForecastBerlin;
-JSONObject jsonCurrentMoscow;
-JSONObject jsonForecastMoscow;
+JSONObject jsonCurrentLichtenrade;
+JSONObject jsonForecastLichtenrade;
 
 void buildingURL() {
   String baseURL_Current = "http://api.openweathermap.org/data/2.5/weather?";
   String baseURL_Forecast = "http://api.openweathermap.org/data/2.5/forecast?";
   String albertaId = "id=5883102"; //City ID Numbers
   String edmontonId = "id=5946768";
-  String berlinId = "id=5913490";
-  String moscowId = "id=6118158";
-  String apiKey = "APPID=e3a46830f7ca648a3730bce5f5904831"; 
+  String BerlinId = "id=524901";
+  String LichtenradeId = "id=2878044";
+  String apiKey = "APPID=06ee4dfaf9a7c9bdf9024604eda99160"; //API Key is PRIVATE so not included here
   String mode = "mode=json";
   String unitMetric = "units=metric";
   String and = "&";
@@ -37,20 +34,20 @@ void buildingURL() {
   URLForecastAlberta = baseURL_Forecast+albertaId+and+apiKey+and+mode+and+unitMetric;
   URLCurrentEdmonton = baseURL_Current+edmontonId+and+apiKey+and+mode+and+unitMetric;
   URLForecastEdmonton = baseURL_Forecast+edmontonId+and+apiKey+and+mode+and+unitMetric;
-  URLCurrentBerlin = baseURL_Current+berlinId+and+apiKey+and+mode+and+unitMetric;
-  URLForecastBerlin = baseURL_Forecast+berlinId+and+apiKey+and+mode+and+unitMetric;
-  URLCurrentMoscow = baseURL_Current+moscowId+and+apiKey+and+mode+and+unitMetric;
-  URLForecastMoscow = baseURL_Forecast+moscowId+and+apiKey+and+mode+and+unitMetric;
+  URLCurrentBerlin = baseURL_Current+BerlinId+and+apiKey+and+mode+and+unitMetric;
+  URLForecastBerlin = baseURL_Forecast+BerlinId+and+apiKey+and+mode+and+unitMetric;
+  URLCurrentLichtenrade = baseURL_Current+LichtenradeId+and+apiKey+and+mode+and+unitMetric;
+  URLForecastLichtenrade = baseURL_Forecast+LichtenradeId+and+apiKey+and+mode+and+unitMetric;
 
-
+  //Verification in Console, copy-paste variable output to Chrome and verify data can be seen correctly
   //println(URLCurrentAlberta);
   //println(URLForecastAlberta);
   //println(URLCurrentEdmonton);
   //println(URLForecastEdmonton);
   //println(URLCurrentBerlin);
   //println(URLForecastBerlin);
-  //println(URLCurrentMoscow);
-  //println(URLForecastMoscow);
+  //println(URLCurrentLichtenrade);
+  //println(URLForecastLichtenrade);
 } //End buildingURL()
 
 void APICall() {
@@ -60,8 +57,8 @@ void APICall() {
   jsonForecastEdmonton = loadJSONObject(URLForecastEdmonton);
   jsonCurrentBerlin = loadJSONObject(URLCurrentBerlin);
   jsonForecastBerlin = loadJSONObject(URLForecastBerlin);
-  jsonCurrentMoscow = loadJSONObject(URLCurrentMoscow);
-  jsonForecastMoscow = loadJSONObject(URLForecastMoscow);
+  jsonCurrentLichtenrade = loadJSONObject(URLCurrentLichtenrade);
+  jsonForecastLichtenrade = loadJSONObject(URLForecastLichtenrade);
 } //End APICall
 
-//Loading JSONObjects with Website API Data
+//Loading JSONObjects with Website API Datate API Data

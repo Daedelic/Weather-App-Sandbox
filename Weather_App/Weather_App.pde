@@ -1,6 +1,7 @@
+
 // Open Weather Map App
 // Global Variables
-String edmTemp, BerTemp, MosTemp;
+String edmTemp, berTemp, lichTemp;
 
 void setup() {
   buildingURL();
@@ -24,16 +25,19 @@ void setup() {
   textDraw(nameEdm, titleFont, height, #2C08FF, LEFT, CENTER, apiCallX1, apiCallY1, apiCallRectWidth1, apiCallRectHeight1); //Edmonton
   println(nameEdm);
   textDraw(nameBer, titleFont, height, #2C08FF, LEFT, CENTER, apiCallX2, apiCallY2, apiCallRectWidth2, apiCallRectHeight2); //Berlin
-  textDraw(nameMos, titleFont, height, #2C08FF, LEFT, CENTER, apiCallX3, apiCallY3, apiCallRectWidth3, apiCallRectHeight3); //Moscow
+  textDraw(nameLich, titleFont, height, #2C08FF, LEFT, CENTER, apiCallX3, apiCallY3, apiCallRectWidth3, apiCallRectHeight3); //Lichtenrade
 }
 
 void draw() {
+  // City Call, see procedure using Boolean & Button
+  // Choice of Three Cities: Edmonton, Berlin, Lichtenrade
 }
 
 void mousePressed() {
   APICall();
   unwrapToVariables();
   println(apiCurrentDateCall);
+  // City Call, see procedure using Boolean & Button
   //
   
   if ( mouseX>apiCallX1 && mouseX<apiCallX1+apiCallRectWidth1 && mouseY>apiCallY1 && mouseY<apiCallY1+apiCallRectHeight1 ) {
@@ -44,18 +48,18 @@ void mousePressed() {
   }
   //
   if (mouseX>apiCallX2 && mouseX<apiCallX2+apiCallRectWidth2 && mouseY>apiCallY2 && mouseY<apiCallY2+apiCallRectHeight2) {
-    BerTemp = String.valueOf(tempBerlin);
+    berTemp = String.valueOf(tempBerlin);
     rect(currentTempX, currentTempY, currentTempRectWidth, currentTempRectHeight);
-    textDraw(BerTemp, titleFont, height, #2C08FF, CENTER, CENTER, currentTempX, currentTempY, currentTempRectWidth, currentTempRectHeight); //Berlin
-    println(tempBerlin, BerTemp);
+    textDraw(berTemp, titleFont, height, #2C08FF, CENTER, CENTER, currentTempX, currentTempY, currentTempRectWidth, currentTempRectHeight); //Berlin
+    println(tempBerlin, berTemp);
   }
   //
   
   if (mouseX>apiCallX3 && mouseX<apiCallX3+apiCallRectWidth3 && mouseY>apiCallY3 && mouseY<apiCallY3+apiCallRectHeight3) {
-    MosTemp = String.valueOf(tempMoscow);
+    lichTemp = String.valueOf(tempLichtenrade);
     rect(currentTempX, currentTempY, currentTempRectWidth, currentTempRectHeight);
-    textDraw(MosTemp, titleFont, height, #2C08FF, CENTER, CENTER, currentTempX, currentTempY, currentTempRectWidth, currentTempRectHeight); //MoscowBerlin
-    println(tempMoscow, MosTemp);
+    textDraw(lichTemp, titleFont, height, #2C08FF, CENTER, CENTER, currentTempX, currentTempY, currentTempRectWidth, currentTempRectHeight); //Berlin
+    println(tempLichtenrade, lichTemp);
   }
   
   //

@@ -1,31 +1,3 @@
-//UnwrapToVariables
-/* Code to Copy, use println() to verify
- 
- Note: use APICall() Variables here, for example jsonCurrentEdmonton
- Caution: variables should be a mix of global and local variables
- 
- JSONArray weather = jsonObject-Variable.getJSONArray("weather"); //Unwrapping
- 
- JSONObject all = weather.getJSONObject(0); //Unwrap {}
- String mainWeather = all.getString("main");
- String description = all.getString("description");
- String icon = all.getString("icon");
- 
- JSONObject main = jsonObject-Variable.getJSONObject("main"); //Unwrap {}
- float temp = main.getFloat("temp");
- float tempMin = main.getFloat("temp_min");
- float tempMax = main.getFloat("temp_max");
- 
- int apiCallTime = jsonObject-Variable.getInt("dt");
- 
- JSONObject sys = jsonObject-Variable.getJSONObject("sys"); //Unwrap {}
- String country = sys.getString("country");
- int sunrise = sys.getInt("sunrise");
- int sunset = sys.getInt("sunset");
- 
- String name = jsonObject-Variable.getString("name");
- 
- */
 
 import java.text.ParseException;  
 import java.text.SimpleDateFormat;  
@@ -42,14 +14,14 @@ String mainWeatherBerlin, descriptionBerlin, iconBerlin, countryBerlin, nameBerl
 float tempBerlin, tempMinBerlin, tempMaxBerlin;
 int apiCallTimeBerlin, sunriseBerlin, sunsetBerlin;
 
-String mainWeatherMoscow, descriptionMoscow, iconMoscow, countryMoscow, nameMoscow;
-float tempMoscow, tempMinMoscow, tempMaxMoscow;
-int apiCallTimeMoscow, sunriseMoscow, sunsetMoscow;
+String mainWeatherLichtenrade, descriptionLichtenrade, iconLichtenrade, countryLichtenrade, nameLichtenrade;
+float tempLichtenrade, tempMinLichtenrade, tempMaxLichtenrade;
+int apiCallTimeLichtenrade, sunriseLichtenrade, sunsetLichtenrade;
 
 void unwrapToVariables() {
   currentEdmonton();
   currentBerlin();
-  currentMoscow();
+  currentLichtenrade();
 }
 
 Date humanDate(long unixTime) {
@@ -104,25 +76,25 @@ void currentBerlin() {
   nameBerlin = jsonCurrentBerlin.getString("name");
 }
 
-void currentMoscow() {
-  JSONArray weatherMoscow = jsonCurrentMoscow.getJSONArray("weather"); //Unwrapping
+void currentLichtenrade() {
+  JSONArray weatherLichtenrade = jsonCurrentLichtenrade.getJSONArray("weather"); //Unwrapping
 
-  JSONObject allMoscow = weatherMoscow.getJSONObject(0); //Unwrap {}
-  mainWeatherMoscow = allMoscow.getString("main");
-  descriptionMoscow = allMoscow.getString("description");
-  iconMoscow = allMoscow.getString("icon");
+  JSONObject allLichtenrade = weatherLichtenrade.getJSONObject(0); //Unwrap {}
+  mainWeatherLichtenrade = allLichtenrade.getString("main");
+  descriptionLichtenrade = allLichtenrade.getString("description");
+  iconLichtenrade = allLichtenrade.getString("icon");
 
-  JSONObject mainMoscow = jsonCurrentMoscow.getJSONObject("main"); //Unwrap {}
-  tempMoscow = mainMoscow.getFloat("temp");
-  tempMinMoscow = mainMoscow.getFloat("temp_min");
-  tempMaxMoscow = mainMoscow.getFloat("temp_max");
+  JSONObject mainLichtenrade = jsonCurrentLichtenrade.getJSONObject("main"); //Unwrap {}
+  tempLichtenrade = mainLichtenrade.getFloat("temp");
+  tempMinLichtenrade = mainLichtenrade.getFloat("temp_min");
+  tempMaxLichtenrade = mainLichtenrade.getFloat("temp_max");
 
-  apiCallTimeMoscow = jsonCurrentMoscow.getInt("dt");
+  apiCallTimeLichtenrade = jsonCurrentLichtenrade.getInt("dt");
 
-  JSONObject sysMoscow = jsonCurrentMoscow.getJSONObject("sys"); //Unwrap {}
-  countryMoscow = sysMoscow.getString("country");
-  sunriseMoscow = sysMoscow.getInt("sunrise");
-  sunsetMoscow = sysMoscow.getInt("sunset");
+  JSONObject sysLichtenrade = jsonCurrentLichtenrade.getJSONObject("sys"); //Unwrap {}
+  countryLichtenrade = sysLichtenrade.getString("country");
+  sunriseLichtenrade = sysLichtenrade.getInt("sunrise");
+  sunsetLichtenrade = sysLichtenrade.getInt("sunset");
 
-  nameMoscow = jsonCurrentMoscow.getString("name");
+  nameLichtenrade = jsonCurrentLichtenrade.getString("name");
 }

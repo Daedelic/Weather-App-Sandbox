@@ -1,2 +1,1 @@
-# Weather-App-Sandbox
-weather app
+app of weather

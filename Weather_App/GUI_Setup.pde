@@ -6,7 +6,7 @@ float currentAPIX, currentAPIY, currentAPIRectWidth, currentAPIRectHeight;
 float currentTempX, currentTempY, currentTempRectWidth, currentTempRectHeight;
 float apiCallX1, apiCallY1, apiCallRectWidth1, apiCallRectHeight1; //Edmonton
 float apiCallX2, apiCallY2, apiCallRectWidth2, apiCallRectHeight2; //Berlin
-float apiCallX3, apiCallY3, apiCallRectWidth3, apiCallRectHeight3; //Moscow
+float apiCallX3, apiCallY3, apiCallRectWidth3, apiCallRectHeight3; //Lichtenrade
 
 void GUI_Setup() {
   background(black); // Add dark mode
@@ -26,7 +26,7 @@ void GUI_Setup() {
   currentAPIX = width * 0;
   currentAPIY = height * 30/300;
   currentAPIRectWidth = width * 1;
-  currentAPIRectHeight = height * 15/300;
+  currentAPIRectHeight = height * 25/300;
   rect(currentAPIX, currentAPIY, currentAPIRectWidth, currentAPIRectHeight);
   // Edmonton
   apiCallX1 = width * 0;
@@ -40,7 +40,7 @@ void GUI_Setup() {
   apiCallRectWidth2 = width * 1/3;
   apiCallRectHeight2 = height * 60/300;
   rect(apiCallX2, apiCallY2, apiCallRectWidth2, apiCallRectHeight2);
-  //Red Deer
+  //Lichtenrade
   apiCallX3 = width * 2/3;
   apiCallY3 = height * 240/300;
   apiCallRectWidth3 = width * 1/3;
